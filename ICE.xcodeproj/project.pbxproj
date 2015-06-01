@@ -1,0 +1,735 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DC08A14E1B1C64F000697C19 /* ICE.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DCB7EB131AC3374D006335EA /* ICE.xcdatamodeld */; };
+		DC3CD2F01B1A4D8B005480D7 /* user_blank.png in Resources */ = {isa = PBXBuildFile; fileRef = DC3CD2EF1B1A4D8B005480D7 /* user_blank.png */; };
+		DC41077F1B1D07E5002480B1 /* PersonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC41077C1B1D07E5002480B1 /* PersonData.swift */; };
+		DC4107851B1D08CC002480B1 /* PersonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4107831B1D08AA002480B1 /* PersonData.swift */; };
+		DC4107861B1D08E8002480B1 /* NumberString.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC41077B1B1D07E5002480B1 /* NumberString.swift */; };
+		DC496D0B1B1D1E090081E8CC /* Stuff.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC496D0A1B1D1E090081E8CC /* Stuff.swift */; };
+		DC4E83E61B1BC91000793C0E /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC4E83E51B1BC91000793C0E /* NotificationCenter.framework */; };
+		DC4E83EB1B1BC91000793C0E /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4E83EA1B1BC91000793C0E /* TodayViewController.swift */; };
+		DC4E83ED1B1BC91000793C0E /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC4E83EC1B1BC91000793C0E /* MainInterface.storyboard */; };
+		DC4E83F01B1BC91000793C0E /* ICE Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = DC4E83E41B1BC91000793C0E /* ICE Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		DC6B89E91AF8CFB000E1891C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC6B89E81AF8CFB000E1891C /* CFNetwork.framework */; };
+		DC6B89EB1AF8CFC200E1891C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC6B89EA1AF8CFC200E1891C /* Security.framework */; };
+		DC6B89ED1AF8CFCE00E1891C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC6B89EC1AF8CFCE00E1891C /* SystemConfiguration.framework */; };
+		DC6B89EF1AF8CFDB00E1891C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC6B89EE1AF8CFDB00E1891C /* QuartzCore.framework */; };
+		DC6B89F11AF8D00D00E1891C /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DC6B89F01AF8D00D00E1891C /* libc++.dylib */; };
+		DC6B89F31AF8D01600E1891C /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DC6B89F21AF8D01600E1891C /* libz.dylib */; };
+		DC779ACA1B1CBF6E00841A71 /* Dropbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC779AC91B1CBF6E00841A71 /* Dropbox.framework */; };
+		DC8666FE1AC6FC4F000C9F1F /* personEditDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8666FD1AC6FC4F000C9F1F /* personEditDetailsVC.swift */; };
+		DCB4DA8D1B1A7AA20061BB9E /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DCB4DA8C1B1A7AA20061BB9E /* icon.png */; };
+		DCB7EB121AC3374D006335EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB7EB111AC3374D006335EA /* AppDelegate.swift */; };
+		DCB7EB151AC3374D006335EA /* ICE.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DCB7EB131AC3374D006335EA /* ICE.xcdatamodeld */; };
+		DCB7EB171AC3374D006335EA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB7EB161AC3374D006335EA /* ViewController.swift */; };
+		DCB7EB1A1AC3374D006335EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCB7EB181AC3374D006335EA /* Main.storyboard */; };
+		DCB7EB1C1AC3374D006335EA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCB7EB1B1AC3374D006335EA /* Images.xcassets */; };
+		DCB7EB1F1AC3374D006335EA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCB7EB1D1AC3374D006335EA /* LaunchScreen.xib */; };
+		DCB7EB2B1AC3374D006335EA /* ICETests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB7EB2A1AC3374D006335EA /* ICETests.swift */; };
+		DCE1C76E1B0DEDC50056627B /* MyAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE1C76D1B0DEDC50056627B /* MyAlertController.swift */; };
+		DCED9CA61AC347BF00E5CD95 /* contactsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCED9CA51AC347BF00E5CD95 /* contactsTVC.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DC4E83EE1B1BC91000793C0E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DCB7EB041AC3374D006335EA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DC4E83E31B1BC91000793C0E;
+			remoteInfo = "ICE Widget";
+		};
+		DCB7EB251AC3374D006335EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DCB7EB041AC3374D006335EA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DCB7EB0B1AC3374D006335EA;
+			remoteInfo = ICE;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DC4E83F41B1BC91000793C0E /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				DC4E83F01B1BC91000793C0E /* ICE Widget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC4F83BD1B1CB79400F271AA /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		DC08A1511B1C7B9800697C19 /* ICE Widget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "ICE Widget.entitlements"; sourceTree = "<group>"; };
+		DC08A1521B1C7CEC00697C19 /* ICE.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = ICE.entitlements; sourceTree = "<group>"; };
+		DC3CD2EF1B1A4D8B005480D7 /* user_blank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user_blank.png; sourceTree = "<group>"; };
+		DC41077B1B1D07E5002480B1 /* NumberString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberString.swift; sourceTree = SOURCE_ROOT; };
+		DC41077C1B1D07E5002480B1 /* PersonData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonData.swift; sourceTree = SOURCE_ROOT; };
+		DC4107831B1D08AA002480B1 /* PersonData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonData.swift; sourceTree = SOURCE_ROOT; };
+		DC496D0A1B1D1E090081E8CC /* Stuff.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stuff.swift; sourceTree = "<group>"; };
+		DC4E83E41B1BC91000793C0E /* ICE Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "ICE Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC4E83E51B1BC91000793C0E /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		DC4E83E91B1BC91000793C0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC4E83EA1B1BC91000793C0E /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		DC4E83EC1B1BC91000793C0E /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
+		DC6B89E81AF8CFB000E1891C /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		DC6B89EA1AF8CFC200E1891C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		DC6B89EC1AF8CFCE00E1891C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		DC6B89EE1AF8CFDB00E1891C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		DC6B89F01AF8D00D00E1891C /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		DC6B89F21AF8D01600E1891C /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		DC6B89F41AF8D35800E1891C /* ICE-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ICE-Bridging-Header.h"; sourceTree = "<group>"; };
+		DC779AC91B1CBF6E00841A71 /* Dropbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Dropbox.framework; path = "../../../../../../../../Downloads/dropbox-ios-sync-sdk-3.1.2/Dropbox.framework"; sourceTree = "<group>"; };
+		DC8666FD1AC6FC4F000C9F1F /* personEditDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = personEditDetailsVC.swift; sourceTree = "<group>"; };
+		DCB4DA8C1B1A7AA20061BB9E /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		DCB7EB0C1AC3374D006335EA /* ICE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ICE.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCB7EB101AC3374D006335EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCB7EB111AC3374D006335EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DCB7EB141AC3374D006335EA /* ICE.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ICE.xcdatamodel; sourceTree = "<group>"; };
+		DCB7EB161AC3374D006335EA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DCB7EB191AC3374D006335EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DCB7EB1B1AC3374D006335EA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DCB7EB1E1AC3374D006335EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		DCB7EB241AC3374D006335EA /* ICETests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ICETests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCB7EB291AC3374D006335EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCB7EB2A1AC3374D006335EA /* ICETests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICETests.swift; sourceTree = "<group>"; };
+		DCE1C76D1B0DEDC50056627B /* MyAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAlertController.swift; sourceTree = "<group>"; };
+		DCED9CA51AC347BF00E5CD95 /* contactsTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = contactsTVC.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DC4E83E11B1BC91000793C0E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC4E83E61B1BC91000793C0E /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCB7EB091AC3374D006335EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC779ACA1B1CBF6E00841A71 /* Dropbox.framework in Frameworks */,
+				DC6B89F31AF8D01600E1891C /* libz.dylib in Frameworks */,
+				DC6B89F11AF8D00D00E1891C /* libc++.dylib in Frameworks */,
+				DC6B89EF1AF8CFDB00E1891C /* QuartzCore.framework in Frameworks */,
+				DC6B89ED1AF8CFCE00E1891C /* SystemConfiguration.framework in Frameworks */,
+				DC6B89EB1AF8CFC200E1891C /* Security.framework in Frameworks */,
+				DC6B89E91AF8CFB000E1891C /* CFNetwork.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCB7EB211AC3374D006335EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DC4E83E71B1BC91000793C0E /* ICE Widget */ = {
+			isa = PBXGroup;
+			children = (
+				DC4107831B1D08AA002480B1 /* PersonData.swift */,
+				DC4E83EA1B1BC91000793C0E /* TodayViewController.swift */,
+				DC4E83EC1B1BC91000793C0E /* MainInterface.storyboard */,
+				DC4E83E81B1BC91000793C0E /* Supporting Files */,
+			);
+			path = "ICE Widget";
+			sourceTree = "<group>";
+		};
+		DC4E83E81B1BC91000793C0E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DC08A1511B1C7B9800697C19 /* ICE Widget.entitlements */,
+				DC4E83E91B1BC91000793C0E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DC6B89F71AF8D78F00E1891C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DC779AC91B1CBF6E00841A71 /* Dropbox.framework */,
+				DC6B89F21AF8D01600E1891C /* libz.dylib */,
+				DC6B89F01AF8D00D00E1891C /* libc++.dylib */,
+				DC6B89EE1AF8CFDB00E1891C /* QuartzCore.framework */,
+				DC6B89EC1AF8CFCE00E1891C /* SystemConfiguration.framework */,
+				DC6B89EA1AF8CFC200E1891C /* Security.framework */,
+				DC6B89E81AF8CFB000E1891C /* CFNetwork.framework */,
+				DC4E83E51B1BC91000793C0E /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			path = ICEFramework.framework;
+			sourceTree = SOURCE_ROOT;
+		};
+		DCB7EB031AC3374D006335EA = {
+			isa = PBXGroup;
+			children = (
+				DC4E83E71B1BC91000793C0E /* ICE Widget */,
+				DC6B89F71AF8D78F00E1891C /* Frameworks */,
+				DCB7EB0E1AC3374D006335EA /* ICE */,
+				DCB7EB271AC3374D006335EA /* ICETests */,
+				DCB7EB0D1AC3374D006335EA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DCB7EB0D1AC3374D006335EA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DCB7EB0C1AC3374D006335EA /* ICE.app */,
+				DCB7EB241AC3374D006335EA /* ICETests.xctest */,
+				DC4E83E41B1BC91000793C0E /* ICE Widget.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DCB7EB0E1AC3374D006335EA /* ICE */ = {
+			isa = PBXGroup;
+			children = (
+				DC41077B1B1D07E5002480B1 /* NumberString.swift */,
+				DC41077C1B1D07E5002480B1 /* PersonData.swift */,
+				DCB7EB111AC3374D006335EA /* AppDelegate.swift */,
+				DCB7EB161AC3374D006335EA /* ViewController.swift */,
+				DCED9CA51AC347BF00E5CD95 /* contactsTVC.swift */,
+				DC8666FD1AC6FC4F000C9F1F /* personEditDetailsVC.swift */,
+				DCE1C76D1B0DEDC50056627B /* MyAlertController.swift */,
+				DC496D0A1B1D1E090081E8CC /* Stuff.swift */,
+				DC6B89F41AF8D35800E1891C /* ICE-Bridging-Header.h */,
+				DCB7EB181AC3374D006335EA /* Main.storyboard */,
+				DCB7EB1D1AC3374D006335EA /* LaunchScreen.xib */,
+				DCB4DA8C1B1A7AA20061BB9E /* icon.png */,
+				DC3CD2EF1B1A4D8B005480D7 /* user_blank.png */,
+				DCB7EB1B1AC3374D006335EA /* Images.xcassets */,
+				DCB7EB131AC3374D006335EA /* ICE.xcdatamodeld */,
+				DCB7EB0F1AC3374D006335EA /* Supporting Files */,
+			);
+			path = ICE;
+			sourceTree = "<group>";
+		};
+		DCB7EB0F1AC3374D006335EA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DC08A1521B1C7CEC00697C19 /* ICE.entitlements */,
+				DCB7EB101AC3374D006335EA /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DCB7EB271AC3374D006335EA /* ICETests */ = {
+			isa = PBXGroup;
+			children = (
+				DCB7EB2A1AC3374D006335EA /* ICETests.swift */,
+				DCB7EB281AC3374D006335EA /* Supporting Files */,
+			);
+			path = ICETests;
+			sourceTree = "<group>";
+		};
+		DCB7EB281AC3374D006335EA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DCB7EB291AC3374D006335EA /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DC4E83E31B1BC91000793C0E /* ICE Widget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC4E83F11B1BC91000793C0E /* Build configuration list for PBXNativeTarget "ICE Widget" */;
+			buildPhases = (
+				DC4E83E01B1BC91000793C0E /* Sources */,
+				DC4E83E11B1BC91000793C0E /* Frameworks */,
+				DC4E83E21B1BC91000793C0E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ICE Widget";
+			productName = "ICE Widget";
+			productReference = DC4E83E41B1BC91000793C0E /* ICE Widget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		DCB7EB0B1AC3374D006335EA /* ICE */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DCB7EB2E1AC3374D006335EA /* Build configuration list for PBXNativeTarget "ICE" */;
+			buildPhases = (
+				DCB7EB081AC3374D006335EA /* Sources */,
+				DCB7EB091AC3374D006335EA /* Frameworks */,
+				DCB7EB0A1AC3374D006335EA /* Resources */,
+				DC4E83F41B1BC91000793C0E /* Embed App Extensions */,
+				DC4F83BD1B1CB79400F271AA /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DC4E83EF1B1BC91000793C0E /* PBXTargetDependency */,
+			);
+			name = ICE;
+			productName = ICE;
+			productReference = DCB7EB0C1AC3374D006335EA /* ICE.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DCB7EB231AC3374D006335EA /* ICETests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DCB7EB311AC3374D006335EA /* Build configuration list for PBXNativeTarget "ICETests" */;
+			buildPhases = (
+				DCB7EB201AC3374D006335EA /* Sources */,
+				DCB7EB211AC3374D006335EA /* Frameworks */,
+				DCB7EB221AC3374D006335EA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DCB7EB261AC3374D006335EA /* PBXTargetDependency */,
+			);
+			name = ICETests;
+			productName = ICETests;
+			productReference = DCB7EB241AC3374D006335EA /* ICETests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DCB7EB041AC3374D006335EA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Felix Gruber";
+				TargetAttributes = {
+					DC4E83E31B1BC91000793C0E = {
+						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = H9V5B53QWB;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					DCB7EB0B1AC3374D006335EA = {
+						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = H9V5B53QWB;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					DCB7EB231AC3374D006335EA = {
+						CreatedOnToolsVersion = 6.3;
+						TestTargetID = DCB7EB0B1AC3374D006335EA;
+					};
+				};
+			};
+			buildConfigurationList = DCB7EB071AC3374D006335EA /* Build configuration list for PBXProject "ICE" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DCB7EB031AC3374D006335EA;
+			productRefGroup = DCB7EB0D1AC3374D006335EA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DCB7EB0B1AC3374D006335EA /* ICE */,
+				DCB7EB231AC3374D006335EA /* ICETests */,
+				DC4E83E31B1BC91000793C0E /* ICE Widget */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DC4E83E21B1BC91000793C0E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC4E83ED1B1BC91000793C0E /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCB7EB0A1AC3374D006335EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC3CD2F01B1A4D8B005480D7 /* user_blank.png in Resources */,
+				DCB4DA8D1B1A7AA20061BB9E /* icon.png in Resources */,
+				DCB7EB1A1AC3374D006335EA /* Main.storyboard in Resources */,
+				DCB7EB1F1AC3374D006335EA /* LaunchScreen.xib in Resources */,
+				DCB7EB1C1AC3374D006335EA /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCB7EB221AC3374D006335EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DC4E83E01B1BC91000793C0E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC4107851B1D08CC002480B1 /* PersonData.swift in Sources */,
+				DC4E83EB1B1BC91000793C0E /* TodayViewController.swift in Sources */,
+				DC08A14E1B1C64F000697C19 /* ICE.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCB7EB081AC3374D006335EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC4107861B1D08E8002480B1 /* NumberString.swift in Sources */,
+				DCED9CA61AC347BF00E5CD95 /* contactsTVC.swift in Sources */,
+				DCB7EB171AC3374D006335EA /* ViewController.swift in Sources */,
+				DC496D0B1B1D1E090081E8CC /* Stuff.swift in Sources */,
+				DC8666FE1AC6FC4F000C9F1F /* personEditDetailsVC.swift in Sources */,
+				DCB7EB121AC3374D006335EA /* AppDelegate.swift in Sources */,
+				DC41077F1B1D07E5002480B1 /* PersonData.swift in Sources */,
+				DCE1C76E1B0DEDC50056627B /* MyAlertController.swift in Sources */,
+				DCB7EB151AC3374D006335EA /* ICE.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCB7EB201AC3374D006335EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCB7EB2B1AC3374D006335EA /* ICETests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DC4E83EF1B1BC91000793C0E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DC4E83E31B1BC91000793C0E /* ICE Widget */;
+			targetProxy = DC4E83EE1B1BC91000793C0E /* PBXContainerItemProxy */;
+		};
+		DCB7EB261AC3374D006335EA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DCB7EB0B1AC3374D006335EA /* ICE */;
+			targetProxy = DCB7EB251AC3374D006335EA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DCB7EB181AC3374D006335EA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DCB7EB191AC3374D006335EA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DCB7EB1D1AC3374D006335EA /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DCB7EB1E1AC3374D006335EA /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DC4E83F21B1BC91000793C0E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "ICE Widget/ICE Widget.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "ICE Widget/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		DC4E83F31B1BC91000793C0E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "ICE Widget/ICE Widget.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "ICE Widget/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		DCB7EB2C1AC3374D006335EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DCB7EB2D1AC3374D006335EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DCB7EB2F1AC3374D006335EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = ICE/ICE.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ICE",
+					"$(PROJECT_DIR)Framework",
+					"$(PROJECT_DIR)",
+					"/Users/felix/Downloads/dropbox-ios-sync-sdk-3.1.2",
+				);
+				INFOPLIST_FILE = ICE/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "ICE/ICE-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		DCB7EB301AC3374D006335EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = ICE/ICE.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ICE",
+					"$(PROJECT_DIR)Framework",
+					"$(PROJECT_DIR)",
+					"/Users/felix/Downloads/dropbox-ios-sync-sdk-3.1.2",
+				);
+				INFOPLIST_FILE = ICE/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "ICE/ICE-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		DCB7EB321AC3374D006335EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ICETests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ICE.app/ICE";
+			};
+			name = Debug;
+		};
+		DCB7EB331AC3374D006335EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ICETests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ICE.app/ICE";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DC4E83F11B1BC91000793C0E /* Build configuration list for PBXNativeTarget "ICE Widget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC4E83F21B1BC91000793C0E /* Debug */,
+				DC4E83F31B1BC91000793C0E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DCB7EB071AC3374D006335EA /* Build configuration list for PBXProject "ICE" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCB7EB2C1AC3374D006335EA /* Debug */,
+				DCB7EB2D1AC3374D006335EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DCB7EB2E1AC3374D006335EA /* Build configuration list for PBXNativeTarget "ICE" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCB7EB2F1AC3374D006335EA /* Debug */,
+				DCB7EB301AC3374D006335EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DCB7EB311AC3374D006335EA /* Build configuration list for PBXNativeTarget "ICETests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCB7EB321AC3374D006335EA /* Debug */,
+				DCB7EB331AC3374D006335EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DCB7EB131AC3374D006335EA /* ICE.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DCB7EB141AC3374D006335EA /* ICE.xcdatamodel */,
+			);
+			currentVersion = DCB7EB141AC3374D006335EA /* ICE.xcdatamodel */;
+			path = ICE.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = DCB7EB041AC3374D006335EA /* Project object */;
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14D136" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="NumberString" representedClassName="NumberString" syncable="YES">
+        <attribute name="number" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="PersonData" representedClassName="PersonData" syncable="YES">
+        <attribute name="allergies" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bloodType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="day" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="img" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="medHist" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="month" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="year" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="PersonData" positionX="-405" positionY="235" width="128" height="176"/>
+        <element name="NumberString" positionX="-405" positionY="297" width="128" height="60"/>
+    </elements>
+</model>
