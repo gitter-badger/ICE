@@ -5,3 +5,9 @@ an iOS application that lets you enter your name, bloodtype, allergies, medical 
 ## TODOs
 - adding Dropbox support for backing up your data across devices
 - bugfixing
+
+## Screenshots
+![](http://i.imgur.com/gMwbDNLl.png)
+![](http://i.imgur.com/t31MVFml.png)
+![](http://i.imgur.com/m3D0WWdl.png)
+![](http://i.imgur.com/nwoCelGl.png)
