@@ -15,7 +15,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DC4E83E31B1BC91000793C0E"
+               BlueprintIdentifier = "DC42759C1B32543A00CFC1F4"
                BuildableName = "ICE Widget.appex"
                BlueprintName = "ICE Widget"
                ReferencedContainer = "container:ICE.xcodeproj">
@@ -29,37 +29,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DCB7EB0B1AC3374D006335EA"
+               BlueprintIdentifier = "DC4275461B32514F00CFC1F4"
                BuildableName = "ICE.app"
                BlueprintName = "ICE"
-               ReferencedContainer = "container:ICE.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DC4F837F1B1CB6AC00F271AA"
-               BuildableName = "ICEKitTests.xctest"
-               BlueprintName = "ICEKitTests"
-               ReferencedContainer = "container:ICE.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DC4F83AA1B1CB79300F271AA"
-               BuildableName = "IceKitTests.xctest"
-               BlueprintName = "IceKitTests"
                ReferencedContainer = "container:ICE.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -71,33 +43,13 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DC4F837F1B1CB6AC00F271AA"
-               BuildableName = "ICEKitTests.xctest"
-               BlueprintName = "ICEKitTests"
-               ReferencedContainer = "container:ICE.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DC4F83AA1B1CB79300F271AA"
-               BuildableName = "IceKitTests.xctest"
-               BlueprintName = "IceKitTests"
-               ReferencedContainer = "container:ICE.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DCB7EB0B1AC3374D006335EA"
-            BuildableName = "ICE.app"
-            BlueprintName = "ICE"
+            BlueprintIdentifier = "DC42759C1B32543A00CFC1F4"
+            BuildableName = "ICE Widget.appex"
+            BlueprintName = "ICE Widget"
             ReferencedContainer = "container:ICE.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -116,7 +68,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DCB7EB0B1AC3374D006335EA"
+            BlueprintIdentifier = "DC4275461B32514F00CFC1F4"
             BuildableName = "ICE.app"
             BlueprintName = "ICE"
             ReferencedContainer = "container:ICE.xcodeproj">
@@ -136,7 +88,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DCB7EB0B1AC3374D006335EA"
+            BlueprintIdentifier = "DC4275461B32514F00CFC1F4"
             BuildableName = "ICE.app"
             BlueprintName = "ICE"
             ReferencedContainer = "container:ICE.xcodeproj">

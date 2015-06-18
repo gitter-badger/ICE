@@ -7,7 +7,7 @@
 		<key>ICE Widget.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>4</integer>
 		</dict>
 		<key>ICE.xcscheme</key>
 		<dict>
@@ -17,52 +17,32 @@
 		<key>ICEKit.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>DC4E83E31B1BC91000793C0E</key>
+		<key>DC4275461B32514F00CFC1F4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DC4F83751B1CB6AC00F271AA</key>
+		<key>DC42755E1B32514F00CFC1F4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DC4F837F1B1CB6AC00F271AA</key>
+		<key>DC4275781B32538600CFC1F4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DC4F83A01B1CB79300F271AA</key>
+		<key>DC4275821B32538600CFC1F4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DC4F83AA1B1CB79300F271AA</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>DC4F83C51B1CB7B700F271AA</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>DC4F83CF1B1CB7B700F271AA</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>DCB7EB0B1AC3374D006335EA</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>DCB7EB231AC3374D006335EA</key>
+		<key>DC42759C1B32543A00CFC1F4</key>
 		<dict>
 			<key>primary</key>
 			<true/>

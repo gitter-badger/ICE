@@ -12,23 +12,31 @@ import CoreData
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
+    let NOTIF_TIME_IN_SECONDS: Double = 5
     
     // MARK: - Core Data stack
     
     func application(application: UIApplication, openURL url: NSURL,
         sourceApplication: String?, annotation: AnyObject?) -> Bool {
+            /*
             let account = DBAccountManager.sharedManager().handleOpenURL(url)
             if (account != nil) {
-                NSLog("app linked successfully")
-                return true
-            }
+            NSLog("app linked successfully")
+            return true
+            }*/
             return false
     }
     
     func application(application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+            /*
             let accountManager = DBAccountManager(appKey: APP_KEY, secret: SECRET)
             DBAccountManager.setSharedManager(accountManager)
+            */
+            application.registerUserNotificationSettings(UIUserNotificationSettings(forTypes:
+                UIUserNotificationType.Alert | UIUserNotificationType.Badge, categories: nil))
+            makeNewNotif()
+            
             return true
     }
     
@@ -106,5 +114,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func applicationWillTerminate(application: UIApplication) {
+    }
+    
+    // notification stuff
+    func makeNewNotif(){
+        let localNotif = UILocalNotification()
+        
+        localNotif.alertBody = "body"
+        localNotif.timeZone = NSTimeZone.defaultTimeZone()
+        localNotif.fireDate = NSDate(timeIntervalSinceNow: NOTIF_TIME_IN_SECONDS)
+        localNotif.category = "NOTIFCAT"
+        localNotif.fireDate = NSDate(timeIntervalSinceNow: 30)
+        UIApplication.sharedApplication().scheduleLocalNotification(localNotif)
     }
 }
