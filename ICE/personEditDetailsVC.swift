@@ -29,7 +29,7 @@ class personEditDetailsVC: UIViewController, UINavigationControllerDelegate,UITe
     override func viewDidLoad() {
         super.viewDidLoad()
         loadDataFromDB()
-        var tgr = UITapGestureRecognizer(target:self, action:Selector("imageTapped:"))
+        let tgr = UITapGestureRecognizer(target:self, action:Selector("imageTapped:"))
         imageView.addGestureRecognizer(tgr)
         libraryPicker.delegate = self
         cameraPicker.delegate = self
@@ -79,26 +79,35 @@ class personEditDetailsVC: UIViewController, UINavigationControllerDelegate,UITe
         NSLog("updated objects: \(results.result)")
         */
         
-        var error: NSError?
-        let fetchedResults = context!.executeFetchRequest(fetchRequest, error: &error) as! [NSManagedObject]?
+        var fetchedResults: [NSManagedObject]? = nil
+        do{
+            fetchedResults = try context!.executeFetchRequest(fetchRequest) as? [NSManagedObject]
+        }catch _ {
+        }
         if let results = fetchedResults {
             for result in results {
                 context!.deleteObject(result as NSManagedObject)
             }
         }
-        context!.save(nil)
+        do {
+            try context!.save()
+        } catch _ {
+        }
         
         entry = NSEntityDescription.insertNewObjectForEntityForName("PersonData", inManagedObjectContext: context!) as? PersonData
         if entry != nil{
-            entry!.firstName = textFirstName.text
-            entry!.lastName = textLastName.text
-            entry!.medHist = textMedHist.text
-            entry!.allergies = textAllergies.text
-            entry!.bloodType = textBloodType.text
-            entry!.img = UIImageJPEGRepresentation(imageView.image, 1)
+            entry!.firstName = textFirstName.text!
+            entry!.lastName = textLastName.text!
+            entry!.medHist = textMedHist.text!
+            entry!.allergies = textAllergies.text!
+            entry!.bloodType = textBloodType.text!
+            entry!.img = UIImageJPEGRepresentation(imageView.image!, 1)!
             
-            // NSOperationQueue.mainQueue().addOperationWithBlock(<#block: () -> Void##() -> Void#>)
-            context!.save(nil)
+            do {
+                // NSOperationQueue.mainQueue().addOperationWithBlock(<#block: () -> Void##() -> Void#>)
+                try context!.save()
+            } catch _ {
+            }
             
             // save to userdefaults
             let defaults: NSUserDefaults = NSUserDefaults(suiteName: "group.at.fhooe.mc.MOM4.ICE")!
@@ -117,12 +126,13 @@ class personEditDetailsVC: UIViewController, UINavigationControllerDelegate,UITe
     
     
     func loadDataFromDB(){
-        var error : NSError?
-        let recordCount = context!.countForFetchRequest(fetchRequest, error: &error)
-        let fetchedResults = context!.executeFetchRequest(fetchRequest, error: &error) as! [NSManagedObject]?
+        var fetchedResults: [NSManagedObject]? = nil;
+        do{
+            fetchedResults = try context!.executeFetchRequest(fetchRequest) as? [NSManagedObject]
+        }catch _{}
         if let results = fetchedResults {
             for result in results {
-                var person = result as! PersonData
+                let person = result as! PersonData
                 textFirstName.text = person.firstName
                 textLastName.text = person.lastName
                 textBloodType.text = person.bloodType
@@ -134,19 +144,6 @@ class personEditDetailsVC: UIViewController, UINavigationControllerDelegate,UITe
         }
     }
     
-    /*
-    @IBAction func linkToDBButtonTouched(sender: UIButton) {
-    NSLog("link to dropbox touched")
-    let accMan = DBAccountManager.sharedManager()
-    if((accMan) != nil){
-    accMan.linkFromController(self)
-    NSLog("account linked")
-    }else{
-    NSLog("accountManager was nil - not linked")
-    }
-    }
-    */
-    
     func showPhotoPicker(source: UIImagePickerControllerSourceType) {
         presentViewController(libraryPicker, animated: true, completion: nil)
     }
@@ -155,8 +152,8 @@ class personEditDetailsVC: UIViewController, UINavigationControllerDelegate,UITe
         dismissViewControllerAnimated(true, completion: nil)
     }
     
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
-        var chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String: AnyObject]) {
+        let chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage
         imageView.image = chosenImage
         dismissViewControllerAnimated(true, completion: nil)
     }
@@ -166,16 +163,6 @@ class personEditDetailsVC: UIViewController, UINavigationControllerDelegate,UITe
         cameraPicker.sourceType = UIImagePickerControllerSourceType.Camera
         cameraPicker.cameraCaptureMode = .Photo
         presentViewController(cameraPicker, animated: true, completion: nil)
-    }
-    
-    func keyboardWillShow(notification: NSNotification) {
-        var keyboardFrame: CGRect = (notification.userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
-        //self.view.frame.origin.y -= 50 //keyboardFrame.height
-    }
-    
-    func keyboardWillHide(notification: NSNotification){
-        var keyboardFrame: CGRect = (notification.userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
-        //self.view.frame.origin.y += 50 //keyboardFrame.height
     }
     
     func textFieldDidBeginEditing(textField: UITextField) {
@@ -222,7 +209,7 @@ class personEditDetailsVC: UIViewController, UINavigationControllerDelegate,UITe
         }
     }
     
-    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         textFirstName.resignFirstResponder()
         textLastName.resignFirstResponder()
         textBloodType.resignFirstResponder()

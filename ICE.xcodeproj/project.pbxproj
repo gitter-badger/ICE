@@ -26,12 +26,11 @@
 		DC4275A91B32543A00CFC1F4 /* ICE Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = DC42759D1B32543A00CFC1F4 /* ICE Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		DC4275AE1B32545E00CFC1F4 /* ICEKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC4275791B32538600CFC1F4 /* ICEKit.framework */; };
 		DC4275B31B3255B800CFC1F4 /* contactsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4275AF1B3255B800CFC1F4 /* contactsTVC.swift */; };
-		DC4275B41B3255B800CFC1F4 /* MyAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4275B01B3255B800CFC1F4 /* MyAlertController.swift */; };
 		DC4275B51B3255B800CFC1F4 /* personEditDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4275B11B3255B800CFC1F4 /* personEditDetailsVC.swift */; };
 		DC4275B61B3255B800CFC1F4 /* Stuff.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4275B21B3255B800CFC1F4 /* Stuff.swift */; };
+		DC6831F71B3463EA0044CE8F /* MyAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6831F61B3463EA0044CE8F /* MyAlertController.swift */; };
 		DCBDEA1D1B3256ED00A5FA56 /* NumberString.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBDEA1B1B3256ED00A5FA56 /* NumberString.swift */; };
 		DCBDEA1E1B3256ED00A5FA56 /* PersonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBDEA1C1B3256ED00A5FA56 /* PersonData.swift */; };
-		DCBDEA221B32586500A5FA56 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DCBDEA1F1B32586500A5FA56 /* icon.png */; };
 		DCBDEA241B32586500A5FA56 /* user_blank.png in Resources */ = {isa = PBXBuildFile; fileRef = DCBDEA211B32586500A5FA56 /* user_blank.png */; };
 /* End PBXBuildFile section */
 
@@ -127,12 +126,11 @@
 		DC4275A31B32543A00CFC1F4 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		DC4275A51B32543A00CFC1F4 /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
 		DC4275AF1B3255B800CFC1F4 /* contactsTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = contactsTVC.swift; sourceTree = "<group>"; };
-		DC4275B01B3255B800CFC1F4 /* MyAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAlertController.swift; sourceTree = "<group>"; };
 		DC4275B11B3255B800CFC1F4 /* personEditDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = personEditDetailsVC.swift; sourceTree = "<group>"; };
 		DC4275B21B3255B800CFC1F4 /* Stuff.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stuff.swift; sourceTree = "<group>"; };
+		DC6831F61B3463EA0044CE8F /* MyAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAlertController.swift; sourceTree = "<group>"; };
 		DCBDEA1B1B3256ED00A5FA56 /* NumberString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NumberString.swift; path = ../NumberString.swift; sourceTree = "<group>"; };
 		DCBDEA1C1B3256ED00A5FA56 /* PersonData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PersonData.swift; path = ../PersonData.swift; sourceTree = "<group>"; };
-		DCBDEA1F1B32586500A5FA56 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		DCBDEA211B32586500A5FA56 /* user_blank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user_blank.png; sourceTree = "<group>"; };
 		DCBDEA251B325DBE00A5FA56 /* ICE Widget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "ICE Widget.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -202,15 +200,15 @@
 		DC42753E1B32514F00CFC1F4 = {
 			isa = PBXGroup;
 			children = (
+				DC4275701B3252B400CFC1F4 /* ICE-Bridging-Header.h */,
+				5355C4E06DCAB62717AFC1D2 /* Frameworks */,
 				DC4275491B32514F00CFC1F4 /* ICE */,
-				DC4275621B32514F00CFC1F4 /* ICETests */,
+				DC4275A01B32543A00CFC1F4 /* ICE Widget */,
 				DC42757A1B32538600CFC1F4 /* ICEKit */,
 				DC4275891B32538600CFC1F4 /* ICEKitTests */,
-				DC4275A01B32543A00CFC1F4 /* ICE Widget */,
-				DC4275481B32514F00CFC1F4 /* Products */,
+				DC4275621B32514F00CFC1F4 /* ICETests */,
 				0FF5EEABB861ACD221D231AD /* Pods */,
-				5355C4E06DCAB62717AFC1D2 /* Frameworks */,
-				DC4275701B3252B400CFC1F4 /* ICE-Bridging-Header.h */,
+				DC4275481B32514F00CFC1F4 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -229,21 +227,20 @@
 		DC4275491B32514F00CFC1F4 /* ICE */ = {
 			isa = PBXGroup;
 			children = (
-				DC4275AF1B3255B800CFC1F4 /* contactsTVC.swift */,
-				DC4275B01B3255B800CFC1F4 /* MyAlertController.swift */,
-				DC4275B11B3255B800CFC1F4 /* personEditDetailsVC.swift */,
-				DC4275B21B3255B800CFC1F4 /* Stuff.swift */,
+				DC42756F1B32515B00CFC1F4 /* ICE.entitlements */,
+				DCBDEA211B32586500A5FA56 /* user_blank.png */,
 				DC42754C1B32514F00CFC1F4 /* AppDelegate.swift */,
-				DC4275511B32514F00CFC1F4 /* ViewController.swift */,
+				DC4275AF1B3255B800CFC1F4 /* contactsTVC.swift */,
+				DC6831F61B3463EA0044CE8F /* MyAlertController.swift */,
 				DCBDEA1B1B3256ED00A5FA56 /* NumberString.swift */,
 				DCBDEA1C1B3256ED00A5FA56 /* PersonData.swift */,
+				DC4275B11B3255B800CFC1F4 /* personEditDetailsVC.swift */,
+				DC4275B21B3255B800CFC1F4 /* Stuff.swift */,
+				DC4275511B32514F00CFC1F4 /* ViewController.swift */,
 				DC4275561B32514F00CFC1F4 /* Images.xcassets */,
-				DC4275531B32514F00CFC1F4 /* Main.storyboard */,
-				DC4275581B32514F00CFC1F4 /* LaunchScreen.xib */,
-				DC42756F1B32515B00CFC1F4 /* ICE.entitlements */,
 				DC42754E1B32514F00CFC1F4 /* ICE.xcdatamodeld */,
-				DCBDEA1F1B32586500A5FA56 /* icon.png */,
-				DCBDEA211B32586500A5FA56 /* user_blank.png */,
+				DC4275581B32514F00CFC1F4 /* LaunchScreen.xib */,
+				DC4275531B32514F00CFC1F4 /* Main.storyboard */,
 				DC42754A1B32514F00CFC1F4 /* Supporting Files */,
 			);
 			path = ICE;
@@ -442,7 +439,8 @@
 		DC42753F1B32514F00CFC1F4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Felix Gruber";
 				TargetAttributes = {
 					DC4275461B32514F00CFC1F4 = {
@@ -453,7 +451,7 @@
 								enabled = 1;
 							};
 							com.apple.iCloud = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -510,7 +508,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DCBDEA221B32586500A5FA56 /* icon.png in Resources */,
 				DC4275551B32514F00CFC1F4 /* Main.storyboard in Resources */,
 				DCBDEA241B32586500A5FA56 /* user_blank.png in Resources */,
 				DC42755A1B32514F00CFC1F4 /* LaunchScreen.xib in Resources */,
@@ -589,9 +586,9 @@
 			files = (
 				DC4275B31B3255B800CFC1F4 /* contactsTVC.swift in Sources */,
 				DC4275521B32514F00CFC1F4 /* ViewController.swift in Sources */,
-				DC4275B41B3255B800CFC1F4 /* MyAlertController.swift in Sources */,
 				DC42754D1B32514F00CFC1F4 /* AppDelegate.swift in Sources */,
 				DC4275B51B3255B800CFC1F4 /* personEditDetailsVC.swift in Sources */,
+				DC6831F71B3463EA0044CE8F /* MyAlertController.swift in Sources */,
 				DCBDEA1D1B3256ED00A5FA56 /* NumberString.swift in Sources */,
 				DCBDEA1E1B3256ED00A5FA56 /* PersonData.swift in Sources */,
 				DC4275B61B3255B800CFC1F4 /* Stuff.swift in Sources */,
@@ -701,6 +698,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -771,7 +769,9 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ICE/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "at.fhooe.mc.MOM4.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "ICE-Bridging-Header.h";
@@ -789,7 +789,9 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ICE/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "at.fhooe.mc.MOM4.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "ICE-Bridging-Header.h";
@@ -810,6 +812,7 @@
 				);
 				INFOPLIST_FILE = ICETests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "at.fhooe.mc.MOM4.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ICE.app/ICE";
 			};
@@ -825,6 +828,7 @@
 				);
 				INFOPLIST_FILE = ICETests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "at.fhooe.mc.MOM4.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ICE.app/ICE";
 			};
@@ -848,6 +852,7 @@
 				INFOPLIST_FILE = ICEKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "at.fhooe.mc.MOM4.ICE.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -870,6 +875,7 @@
 				INFOPLIST_FILE = ICEKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "at.fhooe.mc.MOM4.ICE.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -891,6 +897,7 @@
 				);
 				INFOPLIST_FILE = ICEKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "at.fhooe.mc.MOM4.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ICE.app/ICE";
 			};
@@ -905,6 +912,7 @@
 				);
 				INFOPLIST_FILE = ICEKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "at.fhooe.mc.MOM4.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ICE.app/ICE";
 			};
@@ -914,7 +922,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = "ICE Widget/ICE Widget.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -925,6 +932,7 @@
 				INFOPLIST_FILE = "ICE Widget/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "at.fhooe.mc.MOM4.ICE.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
@@ -935,13 +943,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = "ICE Widget/ICE Widget.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "ICE Widget/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "at.fhooe.mc.MOM4.ICE.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;

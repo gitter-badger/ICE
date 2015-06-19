@@ -41,30 +41,30 @@ class contactsTVC: UITableViewController {
     override func viewWillAppear(animated: Bool) {
         switch ABAddressBookGetAuthorizationStatus(){
         case .Authorized:
-            println("authorized")
+            print("authorized")
             self.readFromAddressBook(addressBook)
             tableView.reloadData()
             
         case .Denied:
-            println("denied")
+            print("denied")
             
         case .NotDetermined:
             ABAddressBookRequestAccessWithCompletion(addressBook, {[weak self] (granted: Bool, error: CFError!) in
                 if granted{
                     let strongSelf = self!
-                    println("user granted")
+                    print("user granted")
                     strongSelf.readFromAddressBook(strongSelf.addressBook)
                     strongSelf.tableView.reloadData()
                 } else {
-                    println("user denied")
+                    print("user denied")
                 }
                 })
             
         case .Restricted:
-            println("restricted")
+            print("restricted")
             
         default:
-            println("unhandled")
+            print("unhandled")
         }
     }
     
@@ -105,7 +105,7 @@ class contactsTVC: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
         
         cell.textLabel?.text = src[indexPath.row].name
         
@@ -117,7 +117,7 @@ class contactsTVC: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
-        var alert = MyAlertController(title: src[indexPath.row].name, message: "choose the number to add", preferredStyle: UIAlertControllerStyle.Alert)
+        let alert = MyAlertController(title: src[indexPath.row].name, message: "choose the number to add", preferredStyle: UIAlertControllerStyle.Alert)
         
         for num in src[indexPath.row].numbers{
             alert.addAction(UIAlertAction(title: "add \(num)", style: .Default, handler: { action -> Void in
@@ -132,13 +132,15 @@ class contactsTVC: UITableViewController {
     }
     
     override func viewWillDisappear(animated: Bool) {
-        var error: NSError?
         if(chosenNr != nil){
-            var entry = NSEntityDescription.insertNewObjectForEntityForName("NumberString", inManagedObjectContext: context!) as! NumberString
+            let entry = NSEntityDescription.insertNewObjectForEntityForName("NumberString", inManagedObjectContext: context!) as! NumberString
             entry.number = chosenNr!
-            context!.save(nil)
+            do {
+                try context!.save()
+            } catch _ {
+            }
         }else{
-            println("choosing of number didn't work")
+            print("choosing of number didn't work")
         }
     }
 }

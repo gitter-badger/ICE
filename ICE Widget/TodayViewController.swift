@@ -33,7 +33,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         super.didReceiveMemoryWarning()
     }
     
-    func widgetPerformUpdateWithCompletionHandler(completionHandler: ((NCUpdateResult) -> Void)!) {
+    func widgetPerformUpdateWithCompletionHandler(completionHandler: ((NCUpdateResult) -> Void)) {
         loadDefaults();
         completionHandler(NCUpdateResult.NewData)
     }
@@ -52,7 +52,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         if let medhist = defaults.stringForKey("medhist"){
             labelMedHist.text = medhist
         }
-        if let numbers = defaults.stringArrayForKey("numbers") as? [String] {
+        if let numbers = defaults.stringArrayForKey("numbers") {
             labelNumbers.text = "\n".join(numbers)
         }
     }

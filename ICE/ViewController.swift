@@ -38,42 +38,46 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         tableView.reloadData()
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier("Cell") as! UITableViewCell
-        cell.textLabel!.text = numbers[indexPath.row]
-        cell.textLabel!.numberOfLines = 2
-        return cell
-    }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return numbers.count
     }
     
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell")
+        cell!.textLabel!.text = numbers[indexPath.row]
+        cell!.textLabel!.numberOfLines = 2
+        return cell!
+    }
+    
     func loadPersonDataFromDB(){
         var error: NSError?
         var recordCount = context!.countForFetchRequest(personDataRequest, error: &error)
-        var fetchedResults = context!.executeFetchRequest(personDataRequest, error: &error) as! [NSManagedObject]?
+        var fetchedResults: [NSManagedObject]? = nil;
+        do{
+            fetchedResults = try context!.executeFetchRequest(personDataRequest) as? [NSManagedObject]
+        }catch _{}
         if let results = fetchedResults {
-            for result in results {
-                persondata = results[0] as? PersonData
-                if persondata != nil{
-                    firstName.text = persondata!.firstName
-                    lastName.text = persondata!.lastName
-                    if let temp = UIImage(data: persondata!.img as NSData){
-                        imageView.image = temp
-                    }
+            persondata = results[0] as? PersonData
+            if persondata != nil{
+                firstName.text = persondata!.firstName
+                lastName.text = persondata!.lastName
+                if let temp = UIImage(data: persondata!.img as NSData){
+                    imageView.image = temp
                 }
             }
+            
         }
         
         recordCount = context!.countForFetchRequest(numbersRequest, error: &error)
         if(recordCount>0){
-            fetchedResults = context!.executeFetchRequest(numbersRequest, error: &error) as! [NSManagedObject]?
+            do{
+                fetchedResults = try context!.executeFetchRequest(numbersRequest) as? [NSManagedObject]
+            }catch _{}
             if let results = fetchedResults {
                 numbers.removeAll(keepCapacity: false)
                 for result in results {
-                    var number = result as! NumberString
-                    addNumber(number.number)
+                    addNumber((result as! NumberString).number)
                 }
             }
         }else{
@@ -81,14 +85,13 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         }
     }
     
-    func addNumber (number: String){
-        if !contains(numbers,number){
+    func addNumber(number: String){
+        if !numbers.contains(number){
             numbers.append(number)
         }
     }
     
-    @IBAction func unwindSegue(segue: UIStoryboardSegue){ // kinda useless
-    }
+    @IBAction func unwindSegue(segue: UIStoryboardSegue){ /*kinda useless*/ }
     
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == UITableViewCellEditingStyle.Delete {
@@ -98,21 +101,27 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     }
     
     override func viewWillDisappear(animated: Bool) {
-        var error: NSError?
-        let fetchedResults = context!.executeFetchRequest(numbersRequest, error: &error) as! [NSManagedObject]?
+        var fetchedResults: [NSManagedObject]? = nil
+        do{
+            fetchedResults = try context!.executeFetchRequest(numbersRequest) as? [NSManagedObject]
+        }catch _{}
         if let results = fetchedResults {
             for result in results {
                 context!.deleteObject(result as NSManagedObject)
             }
         }
-        context!.save(nil)
-        
-        for num in numbers {
-            var entry = NSEntityDescription.insertNewObjectForEntityForName("NumberString", inManagedObjectContext: context!) as! NumberString
-            entry.number = num
-            context!.save(nil)
+        do {
+            try context!.save()
+        } catch _ {
         }
         
+        for num in numbers {
+            (NSEntityDescription.insertNewObjectForEntityForName("NumberString", inManagedObjectContext: context!) as! NumberString).number=num
+            do {
+                try context!.save()
+            } catch _ {
+            }
+        }
         
         // save to userdefaults
         let defaults: NSUserDefaults = NSUserDefaults(suiteName: "group.at.fhooe.mc.MOM4.ICE")!
@@ -124,6 +133,5 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
             defaults.setObject(persondata!.allergies, forKey: "allergies")
         }
         defaults.synchronize()
-        
     }
 }
