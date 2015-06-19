@@ -1,42 +1,30 @@
  //
-//  AppDelegate.swift
-//  ICE
-//
-//  Created by Felix Gruber on 25.03.15.
-//  Copyright (c) 2015 Felix Gruber. All rights reserved.
-//
-
-import UIKit
-import CoreData
-
-@UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+ //  AppDelegate.swift
+ //  ICE
+ //
+ //  Created by Felix Gruber on 25.03.15.
+ //  Copyright (c) 2015 Felix Gruber. All rights reserved.
+ //
+ 
+ import UIKit
+ import CoreData
+ 
+ @UIApplicationMain
+ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     let NOTIF_TIME_IN_SECONDS: Double = 5
     
     // MARK: - Core Data stack
     
     func application(application: UIApplication, openURL url: NSURL,
-        sourceApplication: String?, annotation: AnyObject?) -> Bool {
-            /*
-            let account = DBAccountManager.sharedManager().handleOpenURL(url)
-            if (account != nil) {
-            NSLog("app linked successfully")
-            return true
-            }*/
+        sourceApplication: String?, annotation: AnyObject) -> Bool {
             return false
     }
     
     func application(application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-            /*
-            let accountManager = DBAccountManager(appKey: APP_KEY, secret: SECRET)
-            DBAccountManager.setSharedManager(accountManager)
-            */
             application.registerUserNotificationSettings(UIUserNotificationSettings(forTypes:
                 [UIUserNotificationType.Alert, UIUserNotificationType.Badge], categories: nil))
-            makeNewNotif()
-            
             return true
     }
     
@@ -109,6 +97,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func applicationDidEnterBackground(application: UIApplication) {
+        makeNewNotif()
     }
     
     func applicationWillEnterForeground(application: UIApplication) {
@@ -118,17 +107,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func applicationWillTerminate(application: UIApplication) {
+        makeNewNotif()
     }
     
     // notification stuff
     func makeNewNotif(){
         let localNotif = UILocalNotification()
-        
-        localNotif.alertBody = "body"
+        localNotif.alertTitle = "In Case of Emergency call"
+        let defaults: NSUserDefaults = NSUserDefaults(suiteName: "group.at.fhooe.mc.MOM4.ICE")!
+        /*
+        let name = defaults.stringForKey("name")
+        let bloodtype = defaults.stringForKey("bloodtype")
+        let allergies = defaults.stringForKey("allergies")
+        let medhist = defaults.stringForKey("medhist")
+        */
+        let numbers = defaults.stringArrayForKey("numbers")
+        /*
+        let numbersAsString = "\n".join(numbers!)
+        let arr = ["Name:\n\(name as String!)", "Bloodtype:\n\(bloodtype as String!)", "Allergies:\n\(allergies as String!)", "Medical History:\n\(medhist as String!)", "Numbers:\n\(numbersAsString)"]
+        */
+        localNotif.alertBody = "\n".join(numbers!)
         localNotif.timeZone = NSTimeZone.defaultTimeZone()
         localNotif.fireDate = NSDate(timeIntervalSinceNow: NOTIF_TIME_IN_SECONDS)
         localNotif.category = "NOTIFCAT"
         localNotif.fireDate = NSDate(timeIntervalSinceNow: 30)
         UIApplication.sharedApplication().scheduleLocalNotification(localNotif)
     }
-}
+ }

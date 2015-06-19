@@ -8,6 +8,4 @@
 
 import UIKit
 
-class MyAlertController: UIAlertController {
-   
-}
+class MyAlertController: UIAlertController {}

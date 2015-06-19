@@ -54,19 +54,21 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         var error: NSError?
         var recordCount = context!.countForFetchRequest(personDataRequest, error: &error)
         var fetchedResults: [NSManagedObject]? = nil;
-        do{
-            fetchedResults = try context!.executeFetchRequest(personDataRequest) as? [NSManagedObject]
-        }catch _{}
-        if let results = fetchedResults {
-            persondata = results[0] as? PersonData
-            if persondata != nil{
-                firstName.text = persondata!.firstName
-                lastName.text = persondata!.lastName
-                if let temp = UIImage(data: persondata!.img as NSData){
-                    imageView.image = temp
+        if(recordCount>0){
+            do{
+                fetchedResults = try context!.executeFetchRequest(personDataRequest) as? [NSManagedObject]
+            }catch _{}
+            if let results = fetchedResults {
+                persondata = results[0] as? PersonData
+                if persondata != nil{
+                    firstName.text = persondata!.firstName
+                    lastName.text = persondata!.lastName
+                    if let temp = UIImage(data: persondata!.img as NSData){
+                        imageView.image = temp
+                    }
                 }
+                
             }
-            
         }
         
         recordCount = context!.countForFetchRequest(numbersRequest, error: &error)

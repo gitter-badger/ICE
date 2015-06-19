@@ -33,18 +33,11 @@ class personEditDetailsVC: UIViewController, UINavigationControllerDelegate,UITe
         imageView.addGestureRecognizer(tgr)
         libraryPicker.delegate = self
         cameraPicker.delegate = self
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name:UIKeyboardWillShowNotification, object: nil);
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name:UIKeyboardWillHideNotification, object: nil);
-        
         textFirstName.delegate = self
         textLastName.delegate = self
         textBloodType.delegate = self
         textAllergies.delegate = self
         textMedHist.delegate = self
-    }
-    
-    deinit {
-        NSNotificationCenter.defaultCenter().removeObserver(self);
     }
     
     func imageTapped(img: AnyObject){
@@ -103,15 +96,8 @@ class personEditDetailsVC: UIViewController, UINavigationControllerDelegate,UITe
             entry!.bloodType = textBloodType.text!
             entry!.img = UIImageJPEGRepresentation(imageView.image!, 1)!
             
-            do {
-                // NSOperationQueue.mainQueue().addOperationWithBlock(<#block: () -> Void##() -> Void#>)
-                try context!.save()
-            } catch _ {
-            }
-            
             // save to userdefaults
             let defaults: NSUserDefaults = NSUserDefaults(suiteName: "group.at.fhooe.mc.MOM4.ICE")!
-            
             defaults.setObject(entry!.firstName + " " + entry!.lastName, forKey: "name")
             defaults.setObject(entry!.bloodType, forKey: "bloodtype")
             defaults.setObject(entry!.medHist, forKey: "medhist")
@@ -126,20 +112,24 @@ class personEditDetailsVC: UIViewController, UINavigationControllerDelegate,UITe
     
     
     func loadDataFromDB(){
-        var fetchedResults: [NSManagedObject]? = nil;
-        do{
-            fetchedResults = try context!.executeFetchRequest(fetchRequest) as? [NSManagedObject]
-        }catch _{}
-        if let results = fetchedResults {
-            for result in results {
-                let person = result as! PersonData
-                textFirstName.text = person.firstName
-                textLastName.text = person.lastName
-                textBloodType.text = person.bloodType
-                textAllergies.text = person.allergies
-                textMedHist.text = person.medHist
-                let temp = UIImage(data: person.img as NSData)
-                imageView.image = temp
+        let personDataRequest = NSFetchRequest(entityName: "PersonData")
+        let recordCount = context!.countForFetchRequest(personDataRequest, error: nil)
+        if(recordCount>0){
+            var fetchedResults: [NSManagedObject]? = nil;
+            do{
+                fetchedResults = try context!.executeFetchRequest(fetchRequest) as? [NSManagedObject]
+            }catch _{}
+            if let results = fetchedResults {
+                for result in results {
+                    let person = result as! PersonData
+                    textFirstName.text = person.firstName
+                    textLastName.text = person.lastName
+                    textBloodType.text = person.bloodType
+                    textAllergies.text = person.allergies
+                    textMedHist.text = person.medHist
+                    let temp = UIImage(data: person.img as NSData)
+                    imageView.image = temp
+                }
             }
         }
     }

@@ -32,6 +32,7 @@
 		DCBDEA1D1B3256ED00A5FA56 /* NumberString.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBDEA1B1B3256ED00A5FA56 /* NumberString.swift */; };
 		DCBDEA1E1B3256ED00A5FA56 /* PersonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBDEA1C1B3256ED00A5FA56 /* PersonData.swift */; };
 		DCBDEA241B32586500A5FA56 /* user_blank.png in Resources */ = {isa = PBXBuildFile; fileRef = DCBDEA211B32586500A5FA56 /* user_blank.png */; };
+		DCDDC71D1B348F080080E872 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DCDDC71C1B348F080080E872 /* icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,6 +134,7 @@
 		DCBDEA1C1B3256ED00A5FA56 /* PersonData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PersonData.swift; path = ../PersonData.swift; sourceTree = "<group>"; };
 		DCBDEA211B32586500A5FA56 /* user_blank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user_blank.png; sourceTree = "<group>"; };
 		DCBDEA251B325DBE00A5FA56 /* ICE Widget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "ICE Widget.entitlements"; sourceTree = "<group>"; };
+		DCDDC71C1B348F080080E872 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +229,7 @@
 		DC4275491B32514F00CFC1F4 /* ICE */ = {
 			isa = PBXGroup;
 			children = (
+				DCDDC71C1B348F080080E872 /* icon.png */,
 				DC42756F1B32515B00CFC1F4 /* ICE.entitlements */,
 				DCBDEA211B32586500A5FA56 /* user_blank.png */,
 				DC42754C1B32514F00CFC1F4 /* AppDelegate.swift */,
@@ -509,6 +512,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC4275551B32514F00CFC1F4 /* Main.storyboard in Resources */,
+				DCDDC71D1B348F080080E872 /* icon.png in Resources */,
 				DCBDEA241B32586500A5FA56 /* user_blank.png in Resources */,
 				DC42755A1B32514F00CFC1F4 /* LaunchScreen.xib in Resources */,
 				DC4275571B32514F00CFC1F4 /* Images.xcassets in Resources */,
