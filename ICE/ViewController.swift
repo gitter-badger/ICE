@@ -20,11 +20,22 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     @IBOutlet weak var firstName: UILabel!
     @IBOutlet weak var lastName: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var bloodType: UILabel!
+    @IBOutlet weak var allergies: UILabel!
+    @IBOutlet weak var medHist: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self;
         tableView.delegate = self;
+        
+        imageView.layer.borderWidth=1.0
+        imageView.layer.masksToBounds = false
+        imageView.layer.borderColor = UIColor.grayColor().CGColor
+        imageView.layer.cornerRadius = 13
+        imageView.layer.cornerRadius = imageView.frame.size.height/2
+        imageView.clipsToBounds = true
+        
         loadPersonDataFromDB()
         tableView.reloadData()
     }
@@ -63,6 +74,9 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
                 if persondata != nil{
                     firstName.text = persondata!.firstName
                     lastName.text = persondata!.lastName
+                    bloodType.text = persondata!.bloodType
+                    allergies.text = persondata!.allergies
+                    medHist.text = persondata!.medHist
                     if let temp = UIImage(data: persondata!.img as NSData){
                         imageView.image = temp
                     }

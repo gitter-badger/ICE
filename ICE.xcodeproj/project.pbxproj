@@ -27,7 +27,6 @@
 		DC4275AE1B32545E00CFC1F4 /* ICEKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC4275791B32538600CFC1F4 /* ICEKit.framework */; };
 		DC4275B31B3255B800CFC1F4 /* contactsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4275AF1B3255B800CFC1F4 /* contactsTVC.swift */; };
 		DC4275B51B3255B800CFC1F4 /* personEditDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4275B11B3255B800CFC1F4 /* personEditDetailsVC.swift */; };
-		DC4275B61B3255B800CFC1F4 /* Stuff.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4275B21B3255B800CFC1F4 /* Stuff.swift */; };
 		DC6831F71B3463EA0044CE8F /* MyAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6831F61B3463EA0044CE8F /* MyAlertController.swift */; };
 		DCBDEA1D1B3256ED00A5FA56 /* NumberString.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBDEA1B1B3256ED00A5FA56 /* NumberString.swift */; };
 		DCBDEA1E1B3256ED00A5FA56 /* PersonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBDEA1C1B3256ED00A5FA56 /* PersonData.swift */; };
@@ -128,7 +127,6 @@
 		DC4275A51B32543A00CFC1F4 /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
 		DC4275AF1B3255B800CFC1F4 /* contactsTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = contactsTVC.swift; sourceTree = "<group>"; };
 		DC4275B11B3255B800CFC1F4 /* personEditDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = personEditDetailsVC.swift; sourceTree = "<group>"; };
-		DC4275B21B3255B800CFC1F4 /* Stuff.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stuff.swift; sourceTree = "<group>"; };
 		DC6831F61B3463EA0044CE8F /* MyAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAlertController.swift; sourceTree = "<group>"; };
 		DCBDEA1B1B3256ED00A5FA56 /* NumberString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NumberString.swift; path = ../NumberString.swift; sourceTree = "<group>"; };
 		DCBDEA1C1B3256ED00A5FA56 /* PersonData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PersonData.swift; path = ../PersonData.swift; sourceTree = "<group>"; };
@@ -238,7 +236,6 @@
 				DCBDEA1B1B3256ED00A5FA56 /* NumberString.swift */,
 				DCBDEA1C1B3256ED00A5FA56 /* PersonData.swift */,
 				DC4275B11B3255B800CFC1F4 /* personEditDetailsVC.swift */,
-				DC4275B21B3255B800CFC1F4 /* Stuff.swift */,
 				DC4275511B32514F00CFC1F4 /* ViewController.swift */,
 				DC4275561B32514F00CFC1F4 /* Images.xcassets */,
 				DC42754E1B32514F00CFC1F4 /* ICE.xcdatamodeld */,
@@ -595,7 +592,6 @@
 				DC6831F71B3463EA0044CE8F /* MyAlertController.swift in Sources */,
 				DCBDEA1D1B3256ED00A5FA56 /* NumberString.swift in Sources */,
 				DCBDEA1E1B3256ED00A5FA56 /* PersonData.swift in Sources */,
-				DC4275B61B3255B800CFC1F4 /* Stuff.swift in Sources */,
 				DC4275501B32514F00CFC1F4 /* ICE.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -855,6 +851,7 @@
 				);
 				INFOPLIST_FILE = ICEKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "at.fhooe.mc.MOM4.ICE.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -878,6 +875,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = ICEKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "at.fhooe.mc.MOM4.ICE.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";

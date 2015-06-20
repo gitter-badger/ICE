@@ -30,7 +30,15 @@ class personEditDetailsVC: UIViewController, UINavigationControllerDelegate,UITe
         super.viewDidLoad()
         loadDataFromDB()
         let tgr = UITapGestureRecognizer(target:self, action:Selector("imageTapped:"))
+        
         imageView.addGestureRecognizer(tgr)
+        imageView.layer.borderWidth=1.0
+        imageView.layer.masksToBounds = false
+        imageView.layer.borderColor = UIColor.grayColor().CGColor
+        imageView.layer.cornerRadius = 13
+        imageView.layer.cornerRadius = imageView.frame.size.height/2
+        imageView.clipsToBounds = true
+        
         libraryPicker.delegate = self
         cameraPicker.delegate = self
         textFirstName.delegate = self
