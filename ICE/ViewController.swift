@@ -17,8 +17,7 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     let numbersRequest = NSFetchRequest(entityName: "NumberString")
     
     @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var firstName: UILabel!
-    @IBOutlet weak var lastName: UILabel!
+    @IBOutlet weak var name: UILabel!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var bloodType: UILabel!
     @IBOutlet weak var allergies: UILabel!
@@ -72,8 +71,7 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
             if let results = fetchedResults {
                 persondata = results[0] as? PersonData
                 if persondata != nil{
-                    firstName.text = persondata!.firstName
-                    lastName.text = persondata!.lastName
+                    name.text = "\(persondata!.firstName) \(persondata!.lastName)"
                     bloodType.text = persondata!.bloodType
                     allergies.text = persondata!.allergies
                     medHist.text = persondata!.medHist

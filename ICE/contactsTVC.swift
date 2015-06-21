@@ -88,7 +88,6 @@ class contactsTVC: UITableViewController {
             }
             src.append(Person(name: name, numbers: numbers))
         }
-        
         tableView.reloadData()
     }
     
@@ -106,9 +105,7 @@ class contactsTVC: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
-        
         cell.textLabel?.text = src[indexPath.row].name
-        
         return cell
     }
     
@@ -116,7 +113,7 @@ class contactsTVC: UITableViewController {
         return false
     }
     
-    override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let alert = MyAlertController(title: src[indexPath.row].name, message: "choose the number to add", preferredStyle: UIAlertControllerStyle.Alert)
         
         for num in src[indexPath.row].numbers{
