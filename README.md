@@ -11,5 +11,4 @@ an iOS application that lets you enter your name, bloodtype, allergies, medical 
 ![](http://i.imgur.com/NkS52W4l.png)
 ![](http://i.imgur.com/PIepzHGl.png)
 ![](http://i.imgur.com/SvGCqtZl.png)
-![](http://i.imgur.com/SvGCqtZl.png)
 ![](http://i.imgur.com/u4WVfKwl.png)
