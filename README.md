@@ -2,7 +2,7 @@
 an iOS application that lets you enter your name, bloodtype, allergies, medical history and phone numbers that should be called in case of an accident. the info you enter is being displayed on the lockscreen as a Notification and via iOS' today app extension.
 
 ## known issues
-- built in XCode 7 Beta, not tested in any other versions
+- built in XCode 7 Beta, not tested in any other versions of XCode
 
 ## to come (maybe one day)
 - adding sync support via iCloud/Dropbox using Ensembles
