@@ -1,4 +1,6 @@
 # ICE (Beta)
+
+[![Join the chat at https://gitter.im/grubFX/ICE](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/grubFX/ICE?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 an iOS application that lets you enter your name, bloodtype, allergies, medical history and phone numbers that should be called in case of an accident. the info you enter is being displayed on the lockscreen as a Notification and via iOS' today app extension.
 
 ## known issues
